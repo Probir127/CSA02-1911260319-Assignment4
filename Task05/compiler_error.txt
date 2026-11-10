@@ -1,0 +1,4 @@
+Task05/register_error.c:2:40: error: address of register variable requested
+    2 | int main(void){register int i=0;int *p=&i;return *p;}
+      |                                        ^~
+1 error generated.

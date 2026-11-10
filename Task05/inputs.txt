@@ -1,0 +1,2 @@
+Token start1000. Three sequential calls, alternating kinds0,1,0,1, and INT_MAX rejection.
+All fixtures are embedded in the C source; no interactive input is required.

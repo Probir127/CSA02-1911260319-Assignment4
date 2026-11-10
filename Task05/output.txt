@@ -1,0 +1,10 @@
+automatic: 1001 1001 1001
+static: 1001 1002 1003
+extern across two callers: 1001 1002 1003
+register-local: 1001 1001 1001
+static pair: 1001 1001 1002 1002
+extern pair: 1001 1001 1002 1002
+automatic pair still resets: 1001 1001 1001 1001
+caller-owned pair with register loop: 1001 1001 1002 1002
+single printf argument-order experiment: 1001 1002 1003
+PASS: independent caller state and overflow rejection.
