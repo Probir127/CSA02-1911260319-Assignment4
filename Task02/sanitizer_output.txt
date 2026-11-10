@@ -1,0 +1,7 @@
+Rich parcel size=240; flat size=240; comparisons=3 swaps=2
+Supplied parcel size=44; logical bytes per swap=132; total two swaps=264
+Rich parcel logical bytes per swap=720
+Third receiver PIN via dot=625001; via pointer=625001
+Receiver city filter: Chennai
+ID=502 weight=1200 grams
+PASS: whole-record sort and receiver-city filter.

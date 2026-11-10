@@ -1,0 +1,2 @@
+Supplied parcels501/4.5kg/Madurai,502/1.2kg/Chennai,503/2.8kg/Coimbatore. Rich records use4500,1200,2800grams. Filter Chennai.
+All fixtures are embedded in the C source; no interactive input is required.
