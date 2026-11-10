@@ -1,0 +1,2 @@
+Business date10/11/2026; sale time09:00. Water10@2000paise expiry12Nov; Snack5@3000 expired9Nov; Idli8@4000 prepared10Nov08:00; Breakfast@5500=(Water1+Idli2); Milk4@2500 expiry11Nov. Requests(1,2),(4,2),(3,1),(5,1),(4,2),(2,1),(99,1),(1,0). Additional boundary fixtures in tests.c.
+All fixtures are embedded in the C source; no interactive input is required.

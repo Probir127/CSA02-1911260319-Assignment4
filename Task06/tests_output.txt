@@ -1,0 +1,4 @@
+PASS: duplicate component demand aggregated; successful combo revenue counted once.
+PASS: rejected sale snapshots unchanged for stock, expiry, time, capacity and overflow.
+PASS: invalid recipes/tags/IDs and item capacity rejected; leap/year date boundaries verified.
+PASS: expiry today allowed; expired ingredient and previous-day cooked item rejected.

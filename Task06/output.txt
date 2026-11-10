@@ -1,0 +1,22 @@
+Expiry warnings (inclusive today through two days ahead):
+EXPIRING: 1 Water (in 2 days)
+EXPIRED: 2 Snack (1 days overdue)
+EXPIRING: 5 Milk (in 1 days)
+Sale item=1 quantity=2: accepted
+Sale item=4 quantity=2: accepted
+Sale item=3 quantity=1: accepted
+Sale item=5 quantity=1: accepted
+Sale item=4 quantity=2: insufficient stock
+Sale item=2 quantity=1: expired or not available at sale time
+Sale item=99 quantity=1: unknown item
+Sale item=1 quantity=0: invalid request
+Daily summary: descending revenue; equal revenues ordered by item ID
+ID=4 Breakfast    sold=2 revenue=Rs 110.00 stock=derived from components
+ID=1 Water        sold=2 revenue=Rs 40.00 stock=6
+ID=3 Idli         sold=1 revenue=Rs 40.00 stock=3
+ID=5 Milk         sold=1 revenue=Rs 25.00 stock=3
+ID=2 Snack        sold=0 revenue=Rs 0.00 stock=5
+Sales=4 total=Rs 215.00
+sizeof Date=12 Time=8 Item=112 Sale=48 Inventory=9768
+Item offsets: id=0 name=4 price=48 stock=56 kind=60 union=64 sold=96 revenue=104
+PASS: expected totals and stocks; every rejected sale left all inventory bytes unchanged.
