@@ -1,0 +1,188 @@
++ set -eu
+++ dirname outputs/CSA02_Assignment4_Solved/tools/run_all.sh
++ cd outputs/CSA02_Assignment4_Solved/tools/..
++ mkdir -p build
++ CC=gcc
++ flags=(-std=c17 -Wall -Wextra -Wpedantic -O2)
++ gcc --version
++ compile task1 Task01/patient.c common/date.c
++ local exe=task1
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task01/patient.c common/date.c -o build/task1
++ run Task01/output.txt build/task1
++ local output=Task01/output.txt
++ shift
++ build/task1
++ printf 'PASS %s\n' Task01/output.txt
+PASS Task01/output.txt
++ compile task2_complete Task02/complete_code.c
++ local exe=task2_complete
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task02/complete_code.c -o build/task2_complete
++ run Task02/complete_code_output.txt build/task2_complete
++ local output=Task02/complete_code_output.txt
++ shift
++ build/task2_complete
++ printf 'PASS %s\n' Task02/complete_code_output.txt
+PASS Task02/complete_code_output.txt
++ compile task2 Task02/parcels.c common/date.c
++ local exe=task2
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task02/parcels.c common/date.c -o build/task2
++ run Task02/output.txt build/task2
++ local output=Task02/output.txt
++ shift
++ build/task2
++ printf 'PASS %s\n' Task02/output.txt
+PASS Task02/output.txt
++ compile task3_complete Task03/complete_code.c
++ local exe=task3_complete
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task03/complete_code.c -o build/task3_complete
++ run Task03/complete_code_output.txt build/task3_complete
++ local output=Task03/complete_code_output.txt
++ shift
++ build/task3_complete
++ printf 'PASS %s\n' Task03/complete_code_output.txt
+PASS Task03/complete_code_output.txt
++ compile task3 Task03/layout.c
++ local exe=task3
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task03/layout.c -o build/task3
++ run Task03/output.txt build/task3
++ local output=Task03/output.txt
++ shift
++ build/task3
++ printf 'PASS %s\n' Task03/output.txt
+PASS Task03/output.txt
++ for task in 4 5
++ '[' 4 = 4 ']'
++ src=Task04/compile_error.c
++ status=0
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -c Task04/compile_error.c -o build/error_4.o
++ status=1
++ '[' 1 -eq 0 ']'
++ for task in 4 5
++ '[' 5 = 4 ']'
++ src=Task05/register_error.c
++ status=0
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -c Task05/register_error.c -o build/error_5.o
++ status=1
++ '[' 1 -eq 0 ']'
++ compile task4 Task04/accounts.c
++ local exe=task4
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task04/accounts.c -o build/task4
++ run Task04/output.txt build/task4
++ local output=Task04/output.txt
++ shift
++ build/task4
++ printf 'PASS %s\n' Task04/output.txt
+PASS Task04/output.txt
++ compile task5_complete Task05/complete_code.c
++ local exe=task5_complete
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task05/complete_code.c -o build/task5_complete
++ run Task05/complete_code_output.txt build/task5_complete
++ local output=Task05/complete_code_output.txt
++ shift
++ build/task5_complete
++ printf 'PASS %s\n' Task05/complete_code_output.txt
+PASS Task05/complete_code_output.txt
++ compile task5 Task05/demo.c Task05/counters.c Task05/other.c
++ local exe=task5
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task05/demo.c Task05/counters.c Task05/other.c -o build/task5
++ run Task05/output.txt build/task5
++ local output=Task05/output.txt
++ shift
++ build/task5
++ printf 'PASS %s\n' Task05/output.txt
+PASS Task05/output.txt
++ compile canteen Task06/main.c Task06/canteen.c Task06/demo_data.c common/date.c
++ local exe=canteen
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task06/main.c Task06/canteen.c Task06/demo_data.c common/date.c -o build/canteen
++ run Task06/output.txt build/canteen
++ local output=Task06/output.txt
++ shift
++ build/canteen
++ printf 'PASS %s\n' Task06/output.txt
+PASS Task06/output.txt
++ compile canteen_tests Task06/tests.c Task06/canteen.c Task06/demo_data.c common/date.c
++ local exe=canteen_tests
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 Task06/tests.c Task06/canteen.c Task06/demo_data.c common/date.c -o build/canteen_tests
++ run Task06/tests_output.txt build/canteen_tests
++ local output=Task06/tests_output.txt
++ shift
++ build/canteen_tests
++ printf 'PASS %s\n' Task06/tests_output.txt
+PASS Task06/tests_output.txt
++ for task in 1 2 4 5 6
++ case "$task" in
++ sources=(Task01/patient.c common/date.c)
++ compile sanitized_1 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task01/patient.c common/date.c
++ local exe=sanitized_1
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task01/patient.c common/date.c -o build/sanitized_1
++ run Task01/sanitizer_output.txt build/sanitized_1
++ local output=Task01/sanitizer_output.txt
++ shift
++ build/sanitized_1
++ printf 'PASS %s\n' Task01/sanitizer_output.txt
+PASS Task01/sanitizer_output.txt
++ for task in 1 2 4 5 6
++ case "$task" in
++ sources=(Task02/parcels.c common/date.c)
++ compile sanitized_2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task02/parcels.c common/date.c
++ local exe=sanitized_2
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task02/parcels.c common/date.c -o build/sanitized_2
++ run Task02/sanitizer_output.txt build/sanitized_2
++ local output=Task02/sanitizer_output.txt
++ shift
++ build/sanitized_2
++ printf 'PASS %s\n' Task02/sanitizer_output.txt
+PASS Task02/sanitizer_output.txt
++ for task in 1 2 4 5 6
++ case "$task" in
++ sources=(Task04/accounts.c)
++ compile sanitized_4 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task04/accounts.c
++ local exe=sanitized_4
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task04/accounts.c -o build/sanitized_4
++ run Task04/sanitizer_output.txt build/sanitized_4
++ local output=Task04/sanitizer_output.txt
++ shift
++ build/sanitized_4
++ printf 'PASS %s\n' Task04/sanitizer_output.txt
+PASS Task04/sanitizer_output.txt
++ for task in 1 2 4 5 6
++ case "$task" in
++ sources=(Task05/demo.c Task05/counters.c Task05/other.c)
++ compile sanitized_5 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task05/demo.c Task05/counters.c Task05/other.c
++ local exe=sanitized_5
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task05/demo.c Task05/counters.c Task05/other.c -o build/sanitized_5
++ run Task05/sanitizer_output.txt build/sanitized_5
++ local output=Task05/sanitizer_output.txt
++ shift
++ build/sanitized_5
++ printf 'PASS %s\n' Task05/sanitizer_output.txt
+PASS Task05/sanitizer_output.txt
++ for task in 1 2 4 5 6
++ case "$task" in
++ sources=(Task06/tests.c Task06/canteen.c Task06/demo_data.c common/date.c)
++ compile sanitized_6 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task06/tests.c Task06/canteen.c Task06/demo_data.c common/date.c
++ local exe=sanitized_6
++ shift
++ gcc -std=c17 -Wall -Wextra -Wpedantic -O2 -O1 -fsanitize=address,undefined -fno-omit-frame-pointer Task06/tests.c Task06/canteen.c Task06/demo_data.c common/date.c -o build/sanitized_6
++ run Task06/sanitizer_output.txt build/sanitized_6
++ local output=Task06/sanitizer_output.txt
++ shift
++ build/sanitized_6
++ printf 'PASS %s\n' Task06/sanitizer_output.txt
+PASS Task06/sanitizer_output.txt
++ printf 'All C programs, expected diagnostics and validation checks passed.\n'
+All C programs, expected diagnostics and validation checks passed.
