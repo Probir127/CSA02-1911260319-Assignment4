@@ -1,0 +1,8 @@
+int=4 float=4 enum=4 pointer=8
+all-fields=16 tagged-all=20 union=8 tagged-union=12
+union alignment=4 packet alignment=4 type offset=0 value offset=4
+10000 packets: all-fields=160000 tagged-all=200000 tagged-union=120000 bytes
+Misuse experiment on this platform: stored temperature=31.5; humidity member=1107034112
+Float object bytes: 00 00 fc 41
+Inactive-member result is representation-dependent, not a humidity conversion.
+PASS: status length7 accepted; length8 rejected without changing packet.

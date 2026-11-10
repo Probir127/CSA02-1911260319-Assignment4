@@ -1,0 +1,2 @@
+Temperature31.5C, humidity68percent, statusOK. Status lengths7and8. Layout and inactive-member experiment31.5f.
+All fixtures are embedded in the C source; no interactive input is required.
