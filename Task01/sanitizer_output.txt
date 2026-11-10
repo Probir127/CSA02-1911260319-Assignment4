@@ -1,0 +1,5 @@
+2 Arun age=19 phone=9876543210 BP=110/70 date=09/11/2026
+1 Mina age=42 phone=0123456789 BP=120/80 date=10/11/2026
+sizeof Patient=104; 100 records=10400 bytes; count=100
+Patient offsets: id=0 name=4 age=68 phone=72 bp=84 date=92
+PASS: associated fields, invalid data, duplicate ID and capacity boundary.

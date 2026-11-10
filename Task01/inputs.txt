@@ -1,0 +1,2 @@
+Two synthetic patients Mina(age42) and Arun(age19), then invalid fields, duplicate ID and capacity100/101.
+All fixtures are embedded in the C source; no interactive input is required.
