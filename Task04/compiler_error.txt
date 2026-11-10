@@ -1,0 +1,9 @@
+Task04/compile_error.c:10:24: error: member reference type 'struct account *' is a pointer; did you mean to use '->'?
+   10 |     printf("%d %f\n", p.number, p.balance);
+      |                       ~^
+      |                        ->
+Task04/compile_error.c:10:34: error: member reference type 'struct account *' is a pointer; did you mean to use '->'?
+   10 |     printf("%d %f\n", p.number, p.balance);
+      |                                 ~^
+      |                                  ->
+2 errors generated.

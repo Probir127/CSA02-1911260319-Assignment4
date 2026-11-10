@@ -1,0 +1,2 @@
+Accounts101/5000,102/12000,103/800. Interest4percent. Compare value, pointer and returned copy.
+All fixtures are embedded in the C source; no interactive input is required.

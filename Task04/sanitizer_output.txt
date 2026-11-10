@@ -1,0 +1,9 @@
+number=101 original=0x16faea8c0 local-copy=0x16faea8a0 different=1
+number=102 original=0x16faea8c8 local-copy=0x16faea8a0 different=1
+number=103 original=0x16faea8d0 local-copy=0x16faea8a0 different=1
+After by-value: 5000.00 12000.00 800.00
+Pointer repair: 101 5200.00; returned copy: 5200.00
+Pointer repair: 102 12480.00; returned copy: 12480.00
+Pointer repair: 103 832.00; returned copy: 832.00
+sizeof account=8 pointer=8; conceptual two-copy payload=16
+PASS: original unchanged by value; pointer and return-copy repairs agree.
